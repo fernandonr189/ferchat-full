@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: ./ferchat-api-rust/.
+    ports:
+      - "8000:8000"
+    networks:
+      - ferchat-net
+  frontend:
+    build: ./ferchat-web/.
+    ports:
+      - "5173:5173"
+    networks:
+      - ferchat-net
+
+networks:
+  ferchat-net:
+    driver: bridge
