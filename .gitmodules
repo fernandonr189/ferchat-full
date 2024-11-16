@@ -1,0 +1,3 @@
+[submodule "ferchat-api-rust"]
+	path = ferchat-api-rust
+	url = git@github.com:fernandonr189/ferchat-api-rust.git
