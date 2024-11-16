@@ -4,3 +4,6 @@
 [submodule "ferchat-web"]
 	path = ferchat-web
 	url = git@github.com:fernandonr189/ferchat-web.git
+[submodule "ferchat-db"]
+	path = ferchat-db
+	url = git@github.com:fernandonr189/ferchat-db.git
