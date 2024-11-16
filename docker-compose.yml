@@ -11,6 +11,17 @@ services:
       - "5173:5173"
     networks:
       - ferchat-net
+  db:
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=users
+    build: ./ferchat-db
+    volumes:
+      - /home/fernando/dev/ferchat-full/ferchat-db/db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - ferchat-net
 
 networks:
   ferchat-net:
