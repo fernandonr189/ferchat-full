@@ -1,6 +1,8 @@
 services:
   backend:
     build: ./ferchat-api-rust/.
+    environment:
+      - JWT_SECRET=SecretousSecret
     ports:
       - "8000:8000"
     networks:
@@ -16,8 +18,6 @@ services:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=users
     build: ./ferchat-db
-    volumes:
-      - /home/fernando/dev/ferchat-full/ferchat-db/db:/var/lib/mysql
     ports:
       - "3306:3306"
     networks:
